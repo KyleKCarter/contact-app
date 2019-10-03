@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
+import './reset.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+//components
+import UserNavigation from "./components/UserNavigation";
+
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      
+    }
+  }
+
+  render() {
+    return(
+      <div className="page">
+        <div className="header">
+          <div className="home">Home</div>
+        </div>
+        <UserNavigation />
+      </div>
+    )
+  }
 }
 
 export default App;
